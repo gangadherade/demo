@@ -1,0 +1,18 @@
+type Tutorial {
+    id: ID!
+    title: String!
+    description: String!
+    published: Boolean
+
+}
+
+
+# The Root Query for the application
+type Query {
+    recentTutorials: [Tutorial]!
+}
+
+# The Root Mutation for the application
+type Mutation {
+    writeTutorial(title: String!, description: String!) : Tutorial!
+}
